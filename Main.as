@@ -184,12 +184,10 @@
 			var s:String=levels[currentLevel].toString();
 			if(s.indexOf("17")!=-1||s.indexOf("8")!=-1) return;
 
-			if( currentLevel+1 == levels.length ){
-				blockUI = true;
+			if( currentLevel+1 == levels.length )
 				return trace("GAME OVER");
-			}
 
-			
+			blockUI = true;
 			setTimeout(restartLevel, 1000,currentLevel+1);
 		}
 	}//END Main
